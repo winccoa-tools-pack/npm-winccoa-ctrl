@@ -58,14 +58,14 @@
     "@types/node": "^25.2.3",
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.3.0",
-    "markdownlint": "^0.40.0",
-    "markdownlint-cli": "^0.47.0",
+    "globals": "^17.14.0",
+    "markdownlint": "^0.42.2",
+    "markdownlint-cli": "^0.50.1",
     "prettier": "^3.8.1",
     "ts-node": "^10.9.1",
-    "tsx": "^4.21.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.2.0",
-    "typescript-eslint": "^8.55.0"
+    "typescript-eslint": "^8.73.0"
   },
   "config": {
     "winccoaImage": "mpokornyetm/winccoa-tools-pack-npm-winccoa-core:npm-winccoa-core"
