@@ -320,14 +320,12 @@ async function main(): Promise<void> {
 // Auto-run only when invoked directly (not when imported for testing)
 // Check if this file is being run directly or via a symlink (e.g., installed via npm link)
 // We detect this by checking if it's the main module being executed
+// Match the file name only: the checkout directory is also called "winccoa-ctrl".
+const entryName = process.argv[1] ? path.basename(process.argv[1]) : '';
 const isDirectRun =
     require.main === module ||
-    (process.argv[1] &&
-        (process.argv[1].endsWith('cli.js') ||
-            process.argv[1].endsWith('cli.ts') ||
-            process.argv[1].endsWith('cli.cjs') ||
-            process.argv[1].endsWith('cli.mjs') ||
-            process.argv[1].includes('winccoa-ctrl'))); // Match symlink name
+    /^cli\.(js|ts|cjs|mjs)$/.test(entryName) ||
+    entryName === 'winccoa-ctrl'; // Match symlink name
 
 if (isDirectRun) {
     main();
