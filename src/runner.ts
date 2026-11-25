@@ -1,10 +1,5 @@
 import { CtrlComponent } from '@winccoa-tools-pack/npm-winccoa-core/types/components/implementations/CtrlComponent';
-import type {
-    CtrlExecutionOptions,
-    CtrlExecutionResult,
-    OutputCallback,
-    OutputEvent,
-} from './types';
+import type { CtrlExecutionOptions, CtrlExecutionResult, OutputCallback } from './types';
 
 /**
  * Default execution timeout (60 seconds).
